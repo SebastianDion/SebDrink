@@ -53,3 +53,29 @@ func userInfo() User{
 	user.id = "SEB-" + generateRandomID()
 	return user
 }
+
+func payment(){
+	var choice int
+	var ok string
+	fmt.Println("Choose Payment:")
+	fmt.Println("1. Cash")
+	fmt.Println("2. Cashless")
+	fmt.Print(">")
+	fmt.Scanf("%d", &choice)
+	switch choice{
+	case 1:{
+		fmt.Println("Payed")
+		return
+	}
+case 2:{
+	fmt.Println("QR Code")
+	fmt.Println("type 'ok' when done")
+	fmt.Scanf("%s", ok)
+	fmt.Println("Done")
+	return
+}
+default:{
+	fmt.Println("Payment Failed")
+}
+	}
+}
